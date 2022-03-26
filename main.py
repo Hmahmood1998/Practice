@@ -16,24 +16,24 @@ df=readData()
 
 st.title("My Mini Project Name")
 
-# plt.figure(1, figsize=(15,6))
-# n=0
-# for x in ['Age','Annual Income (k$)','Spending Score (1-100)']:
-#     n+=1
-#     plt.subplot(1,3,n)
-#     plt.subplots_adjust(hspace=0.5, wspace=0.5)
-#     sns.distplot(df[x], bins=20)
-#     plt.title('Distplot of {}'.format(x))
-# plt.show()
+plt.figure(1, figsize=(15,6))
+n=0
+for x in ['Age','Annual Income (k$)','Spending Score (1-100)']:
+    n+=1
+    plt.subplot(1,3,n)
+    plt.subplots_adjust(hspace=0.5, wspace=0.5)
+    sns.distplot(df[x], bins=20)
+    plt.title('Distplot of {}'.format(x))
+plt.show()
 
 plt.figure(1, figsize=(15,5))
 sns.countplot(y='Gender',data=df)
 plt.show()
 
 
-# fig=plotBar(y='Gender',data=df)
-# st.plotly_chart(fig, use_container_width=True)
-# plt.show()
+fig=plotBar(y='Gender',data=df)
+st.plotly_chart(fig, use_container_width=True)
+plt.show()
 
 
 sidebar = st.sidebar
